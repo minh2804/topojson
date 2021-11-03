@@ -5,13 +5,13 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/paulmach/go.geojson"
+	geojson "github.com/paulmach/go.geojson"
 )
 
 type Geometry struct {
 	ID          string                 `json:"id,omitempty"`
 	Type        geojson.GeometryType   `json:"type"`
-	Properties  map[string]interface{} `json:"properties"`
+	Properties  map[string]interface{} `json:"properties,omitempty"`
 	BoundingBox []float64              `json:"bbox,omitempty"`
 
 	Point           []float64
